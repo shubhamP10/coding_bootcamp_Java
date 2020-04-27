@@ -1,8 +1,20 @@
 import java.util.*;
-public class Empwage 
+// import java.Math.*;
+public class empWage 
 {
 	public static void main(String[] args) 
 	{
-		System.out.println("Welcome to Employee Wage Calculation using Java");	
+		System.out.println("Welcome to Employee Wage Calculation using Java");
+		double check;
+		check = Math.floor((Math.random() * 100) % 2 );
+		// System.out.println((int)check);
+		if ((int)check == 1) 
+		{
+			System.out.println("Employee is Present");
+		}
+		else
+		{
+			System.out.println("Employee is Absent!!!");
+		}
 	}
 }
