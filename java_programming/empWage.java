@@ -6,6 +6,9 @@ public class empWage
 	{
 		System.out.println("Welcome to Employee Wage Calculation using Java");
 		double check;
+		double fullDay = 8;
+		double halfDay = 4;
+		double wagePerHr = 20;
 		check = Math.floor((Math.random() * 100) % 2 );
 		// System.out.println((int)check);
 		if ((int)check == 1) 
