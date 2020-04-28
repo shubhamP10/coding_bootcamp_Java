@@ -39,7 +39,5 @@ public class empWage extends empSalary
 		System.out.println("Welcome to Employee Wage Calculation using Java");
 		empSalary emp = new empSalary();
 		emp.employee();
-
-		
 	}
 }
