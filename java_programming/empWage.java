@@ -7,7 +7,6 @@ public class empWage
 		System.out.println("Welcome to Employee Wage Calculation using Java");
 		double check;
 		check = Math.floor((Math.random() * 100) % 2 );
-		// System.out.println((int)check);
 		if ((int)check == 1) 
 		{
 			System.out.println("Employee is Present");
