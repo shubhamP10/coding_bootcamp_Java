@@ -11,10 +11,10 @@ public class EmpWageBuilderMethod
 	public static final int NUM_OF_WORKING_DAYS = 2;
 	public static final int MAX_HOURS_IN_MONTH = 10;
 
-	public static int computeEmpWage()
+	public static int calEmpWageForCompany(String company, int empRate, int numOfDays, int maxHrs)
 	{
 		int empHrs = 0, totalEmpHrs = 0, totalWorkingDays = 0;
-		while(totalEmpHrs <= MAX_HOURS_IN_MONTH && totalWorkingDays < NUM_OF_WORKING_DAYS)
+		while(totalEmpHrs <= maxHrs && totalWorkingDays < numOfDays)
 		{
 			totalWorkingDays++;
 			int empCheck = (int) Math.floor( Math.random() * 10 ) % 3;
@@ -29,13 +29,14 @@ public class EmpWageBuilderMethod
 			totalEmpHrs += empHrs;
 			System.out.println("Day#: "+totalWorkingDays+" Emp Hrs: "+empHrs);
 		}
-		int totalEmpWage = totalEmpHrs * RATE_PER_HOUR;
-		System.out.println("Total Emp Wage: "+totalEmpWage);
+		int totalEmpWage = totalEmpHrs * empRate;
+		System.out.println("Total Emp Wage for company "+company+": "+totalEmpWage);
 		return totalEmpWage;
 	}
 
 	public static void main(String s[])
 	{
-		computeEmpWage();
+		calEmpWageForCompany("DMart",20,2,10);
+		calEmpWageForCompany("Reliance",10,4,20);
 	}
 }
