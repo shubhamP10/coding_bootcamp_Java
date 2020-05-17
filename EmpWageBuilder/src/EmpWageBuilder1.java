@@ -74,12 +74,11 @@ public abstract class EmpWageBuilder1 implements IComputeEmpWage
 // Main method 
 	public static void main (String args [])
 	{
-//		EmpWageBuilder1 EmpWageBuilder1 = new EmpWageBuilder1();
 		EmpWageBuilder1 empWageBuilder = new EmpWageBuilder1;
 		empWageBuilder.addCompanyEmpWage("Dmart", 20, 2, 10);
 		empWageBuilder.addCompanyEmpWage("Reliance", 10, 4, 20);
 	  	empWageBuilder.computeEmpWage();
-	  	System.out.println("Total Wage for DMart Company: "+empWageBuilder.getTotalWage());
+	  	System.out.println("Total Wage for DMart Company: "+empWageBuilder.getTotalWage("DMart"));
 	  	
 	}	
 }
