@@ -22,7 +22,7 @@ public class SaveTotalWageByCompany {
 	//Variables
 	int empHrs = 0;
 	int totalEmpHrs = 0;
-	int totalWorkingDays = 0;
+	int totalWorkingDays = 0; 
 		//Computation
 		while(totalEmpHrs <= maxHoursPerMonth && totalWorkingDays < numOfWorkingDays) {
 			totalWorkingDays++;
@@ -50,10 +50,10 @@ public class SaveTotalWageByCompany {
 		list.add(toString());
 		list.add(toString());
 		
-		// Iterator itr=list.iterator();
-		// 		while(itr.hasNext()){
-		// 			System.out.println(itr.next());
-		// 		}
+		Iterator itr=list.iterator();
+				while(itr.hasNext()){
+					System.out.println(itr.next());
+				}
 		System.out.println("---DATA SAVED FOR COMPANY -> "+company+" ---");
 	}
 

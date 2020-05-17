@@ -1,7 +1,6 @@
-package multicompany;
-
-public class CompanyEmpWage{
-	
+package EmpWageBuilder;
+public class CompanyEmpWage 
+{
 	public final String company ;
 	public final int numOfWorkingDays;
 	public final int empRatePerHour;
@@ -22,6 +21,6 @@ public class CompanyEmpWage{
 	}
 	@Override
 	public String toString(){
-		return "Total Emp Wage for Comapny :" +company+"is : "+totalEmpWage;
+		return "Total Emp Wage for Comapny :" +company+"is : "+totalEmpWage+"\n";
 	}
 }
