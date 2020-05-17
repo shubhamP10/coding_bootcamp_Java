@@ -1,0 +1,6 @@
+Total Emp Wage for Comapny :Dmartis : 160
+Total Emp Wage for Comapny :Relianceis : 240
+Total Emp Wage for Comapny :Dmartis : 80
+Total Emp Wage for Comapny :Relianceis : 280
+Total Emp Wage for Comapny :Dmartis : 240
+Total Emp Wage for Comapny :Relianceis : 80
