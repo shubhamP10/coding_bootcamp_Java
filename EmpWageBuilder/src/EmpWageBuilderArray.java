@@ -1,13 +1,10 @@
-package multicompany;
-import java.util.Random;
-//Employee Wage Computation Problem Solve to Interface
-//@author Shubham Pattar
- public class EmpWageBuilderArray{
-	 
-	private static final int ABSENT = 0;
-	private static final int IS_PART_TIME = 1;
-	private static final int IS_FULL_TIME = 2;
-	
+import EmpWageBuilder.*;
+public class EmpWageBuilderArray {
+
+//	private static final int ABSENT = 0;
+//	private static final int IS_PART_TIME = 1;
+//	private static final int IS_FULL_TIME = 2;
+//	
 	private int numOfCompany=0;
 	private CompanyEmpWage[] companyEmpWageArray;
 
@@ -25,7 +22,7 @@ import java.util.Random;
 	
 	private void computeEmpWage(){
 		
-		for(int i=0; i < numOfWorkingDays; i++){
+		for(int i=0; i < 5; i++){
 			companyEmpWageArray[i].setTotalEmpWage(this.computeEmpWage(companyEmpWageArray[i]));
 			System.out.println(companyEmpWageArray[i]);
 		}
@@ -67,6 +64,5 @@ import java.util.Random;
     	emp.addCompanyEmpWage("Dmart",20,2,100);
 	   	emp.addCompanyEmpWage("Reliance",10,4,100);
 	  	emp.computeEmpWage();
-	}
-
- }
+	}	
+}
