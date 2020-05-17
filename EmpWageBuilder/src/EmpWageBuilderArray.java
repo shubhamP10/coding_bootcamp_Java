@@ -1,4 +1,5 @@
 import EmpWageBuilder.*;
+import java.io.*;
 public class EmpWageBuilderArray {
 
 //	private static final int ABSENT = 0;
@@ -17,14 +18,15 @@ public class EmpWageBuilderArray {
 	{
 		companyEmpWageArray[numOfCompany] = new CompanyEmpWage(company,empRatePerHour,numOfWorkingDays,maxHourInMonth);
 		numOfCompany++;
-		System.out.println(numOfWorkingDays);
+//		System.out.println(numOfWorkingDays);
 	}
 	
-	private void computeEmpWage(){
+	private void computeEmpWage() throws IOException{
 		
-		for(int i=0; i < 5; i++){
+		for(int i=0; i < 2; i++){
 			companyEmpWageArray[i].setTotalEmpWage(this.computeEmpWage(companyEmpWageArray[i]));
 			System.out.println(companyEmpWageArray[i]);
+			saveWageData(companyEmpWageArray[i]);
 		}
 	}
     
@@ -42,27 +44,52 @@ public class EmpWageBuilderArray {
 		
 		switch(empCheck1){
 			case 0:empHrs=8;  
-			System.out.println("Present");
+//			System.out.println("Present");
 			break;
 			case 1:empHrs=4;
-			System.out.println("PartTime");
+//			System.out.println("PartTime");
 			break;
 			case 2:empHrs=0; 
-			System.out.println("Absent");
+//			System.out.println("Absent");
 			break;	
-	   default:System.out.println("Not Avalaible");			
+//	   default:System.out.println("Not Avalaible");			
 		}
 			  totalEmpHrs+=empHrs;
 			  System.out.println("Day:"+totalWorkingDays + " Employee Working Hours:" +empHrs);
 		  }
 	return totalEmpHrs * computeEmpWage.empRatePerHour;
 	}
+	private void saveWageData(CompanyEmpWage c) throws IOException
+	{
+		FileWriter fw = null;
+		try {
+		fw = new FileWriter("empWage.txt",true);
+		fw.append((CharSequence) c.toString());
+		
+		}
+		catch(IOException e)
+		{
+			System.out.println("Cannot Done!!!");
+			e.printStackTrace();
+		}
+		finally
+		{
+			try {
+				fw.flush();
+				fw.close();
+			}
+			catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+	}
 // Main method 
-	public static void main (String args [])
+	public static void main (String args []) throws IOException
 	{
 		EmpWageBuilderArray emp = new EmpWageBuilderArray();
     	emp.addCompanyEmpWage("Dmart",20,2,100);
 	   	emp.addCompanyEmpWage("Reliance",10,4,100);
 	  	emp.computeEmpWage();
+//	  	emp.saveWageData();
 	}	
 }
