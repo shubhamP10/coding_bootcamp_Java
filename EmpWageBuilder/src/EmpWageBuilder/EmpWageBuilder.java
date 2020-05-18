@@ -1,21 +1,22 @@
+package EmpWageBuilder;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
 
-import EmpWageBuilder.*;
-public abstract class EmpWageBuilder1 implements IComputeEmpWage
+//import EmpWageBuilder.*;
+public class EmpWageBuilder 
 {
 
 	private static final int IS_PART_TIME = 1;
 	private static final int IS_FULL_TIME = 2;
 	
-	private int numOfCompany=0;
+//	private int numOfCompany=0;
 	private LinkedList<CompanyEmpWage> companyEmpWageList;
 	private Map<String, CompanyEmpWage> companyToEmpWageMap;
 	
 
 //Constructor
-	public EmpWageBuilder1(){
+	public EmpWageBuilder(){
 		companyEmpWageList = new LinkedList<>();
 		companyToEmpWageMap = new HashMap<>();
 	}
@@ -74,7 +75,7 @@ public abstract class EmpWageBuilder1 implements IComputeEmpWage
 // Main method 
 	public static void main (String args [])
 	{
-		EmpWageBuilder1 empWageBuilder = new EmpWageBuilder1;
+		EmpWageBuilder empWageBuilder = new EmpWageBuilder();
 		empWageBuilder.addCompanyEmpWage("Dmart", 20, 2, 10);
 		empWageBuilder.addCompanyEmpWage("Reliance", 10, 4, 20);
 	  	empWageBuilder.computeEmpWage();
